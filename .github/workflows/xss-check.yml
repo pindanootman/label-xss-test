@@ -1,0 +1,9 @@
+name: test
+on: [push, pull_request]
+jobs:
+  xss-test:
+      name: "<img src=x onerror=alert(1)>"
+          runs-on: ubuntu-latest
+              steps:
+                    - run: echo "test"
+                    
